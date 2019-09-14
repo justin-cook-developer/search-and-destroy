@@ -44,6 +44,8 @@ const checkReverseLoop = (linkedlist, returning = false) => {
   return false;
 };
 
+// could make checkFuncs one func with direction argument
+
 //Complete this algo
 const isLoop = linkedlist => {
   return checkForwardLoop(linkedlist) || checkReverseLoop(linkedlist);
