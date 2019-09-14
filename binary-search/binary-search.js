@@ -1,8 +1,26 @@
 'use strict';
 
+// searchArr
+
+
 // Complete this algo
 const binarySearch = (array, target) => {
+	let searchArr = [...array];
+
+	while (searchArr.length) {
+		const middleIdx = Math.floor(searchArr.length / 2);
+		const middleVal = searchArr[middleIdx];
+
+		if (middleVal === target) {
+			return true;
+		} else if (target > middleVal) {
+			searchArr = searchArr.slice(middleIdx + 1)
+		} else {
+			searchArr = searchArr.slice(0, middleIdx)
+		}
+	}
 	
+	return false
 };
 
 /*
